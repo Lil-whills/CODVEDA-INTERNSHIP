@@ -7,29 +7,38 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <div class="login-container">
     <div class="login-card">
-      <h2>Welcome Back</h2>
-      <p>Login to access your dashboard</p>
       
-      <form class="login-form">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required>
+      <h2>Welcome Back</h2>
+      <p class="subtitle">Login to access your dashboard</p>
+      
+      <form class="login-form" id="loginForm">
         
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter your password" required>
-        
-        <button id="login" type="submit" class="btn btn-primary">Login</button>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
 
-        <div class="password-validation"></div>
-        <div class="password-description">password is strong</div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+
+          <div class="password-validation" id="strengthBar"></div>
+          <div class="password-description" id="strengthText">Password is strong</div>
+        </div>
+
+        <button id="login" type="submit" class="btn-primary">Login</button>
       </form>
       
       <p class="signup-link">
         Don't have an account? <a href="#">Sign up here</a>
       </p>
+
     </div>
   </div>
+
   <script src="login.js"></script>
 </body>
 </html>
